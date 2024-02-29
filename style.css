@@ -1,0 +1,70 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-album {
+    background-color: #f8f9fa; /* Light grey background for the album */
+    padding: 20px; /* Padding around the carousel for that album-like spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the album for depth */
+    border-radius: 5px; /* Slightly rounded corners for the album */
+}
+
+.carousel-item img {
+    max-height: 400px; /* Adjust based on your preference, keeping the images smaller */
+    object-fit: contain; /* Keeps the image aspect ratio, fitting within the max-height */
+    margin: auto; /* Center the images within the carousel item */
+    background-color: #FFF; /* White background to simulate a photo border */
+    padding: 10px; /* Padding around images to simulate the border of a photo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow around each image */
+}
+
+.carousel-inner {
+    background-color: #e9ecef; /* Slightly different background for the carousel inner to simulate album pages */
+    border-radius: 5px; /* Rounded corners inside the album */
+}
+
+/* Previous / Next buttons */
+
+.carousel-control-prev, .carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px; /* Larger click area */
+    height: 60px; /* Square shape */
+    background-color: rgba(0,0,128,.6);
+    border-radius: 50%; /* Circular buttons */
+    border: 2px solid #FFF; /* White border */
+    opacity: 0.75; /* Slightly transparent */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 30px; /* Larger icons */
+    height: 30px;
+    background-size: 30px; /* Ensures the icon scales correctly */
+}
+
+
+/* Carousel indicators */
+
+.carousel-indicators li {
+    background-color: black; /* Style for the carousel indicators */
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for captions */
+    color: white; /* Caption text color */
+}
+
+
+
+/* Add more styles as needed */
