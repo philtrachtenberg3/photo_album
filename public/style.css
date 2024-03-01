@@ -18,7 +18,9 @@ body {
 
 .carousel-item img {
     max-height: 400px; /* Adjust based on your preference, keeping the images smaller */
-    object-fit: contain; /* Keeps the image aspect ratio, fitting within the max-height */
+    height: 500px;
+    width: 100%;
+    object-fit: cover; /* Keeps the image aspect ratio, fitting within the max-height */
     margin: auto; /* Center the images within the carousel item */
     background-color: #FFF; /* White background to simulate a photo border */
     padding: 10px; /* Padding around images to simulate the border of a photo */
@@ -61,10 +63,21 @@ body {
 }
 
 .carousel-caption {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for captions */
-    color: white; /* Caption text color */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    max-height: 30%; /* Maximum height of the caption area */
+    bottom: 0; /* Align to the bottom of the carousel item */
+    left: 0; /* Align to the left edge of the carousel item */
+    right: 0; /* Align to the right edge of the carousel item */
+    padding: 10px; /* Adjust padding as needed */
+    width: 100%; /* Ensure the caption area is full width */
+    transform: translateY(0%); /* Override Bootstrap's default transform, if necessary */
 }
 
+.carousel-caption h5, .carousel-caption p {
+    overflow: hidden; /* Prevents text overflow */
+    text-overflow: ellipsis; /* Adds an ellipsis for overflowed text */
+    white-space: nowrap; /* Keeps the text on a single line */
+}
 
 
 /* Add more styles as needed */

@@ -54,12 +54,28 @@
             </div>
         </div>
     </div>
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" name="image" required>
-        <input type="text" name="title" placeholder="Title" required>
-        <input type="text" name="caption" placeholder="Caption" required>
-        <button type="submit">Upload Photo</button>
-    </form>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <form id="uploadForm" enctype="multipart/form-data" class="p-3">
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Choose Image</label>
+                        <input type="file" class="form-control" id="image" name="image" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Enter title" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="caption" class="form-label">Caption</label>
+                        <input type="text" class="form-control" id="caption" name="caption" placeholder="Enter caption" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload Photo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
     
 
 <!-- Bootstrap JS, Popper.js, and jQuery for Bootstrap components to work properly -->
