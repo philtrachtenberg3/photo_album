@@ -1,0 +1,26 @@
+{
+  "name": "photo_album_database",
+  "version": "1.0.0",
+  "description": "database of photos i think",
+  "main": "app.js",
+  "scripts": {
+    "test": "abc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philtrachtenberg3/photo_album.git"
+  },
+  "keywords": [
+    "photo",
+    "album"
+  ],
+  "author": "phil trachtenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philtrachtenberg3/photo_album/issues"
+  },
+  "homepage": "https://github.com/philtrachtenberg3/photo_album#readme",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
