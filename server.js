@@ -3,6 +3,17 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const fs = require('fs');
+const multer = require('multer');
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'public/images')
+    },
+    filename: function (req, file, cb) {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+        cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname))
+    }
+});
+const upload = multer({ storage: storage });
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
@@ -24,3 +35,10 @@ app.get('/images', (req, res) => {
         }
     });
 });
+
+app.post('/upload', upload.single('image'), (req, res) => {
+    const imageInfo = {
+        title: req.body.title,
+        caption: req.body.caption,
+        filename: req.file.filename // The filename multer saved the image as
+    };
